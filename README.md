@@ -1,5 +1,5 @@
 # Refactoring Views With Helpers Lab
-
+<h1><%= link_to @song.artist.name, artist_path(@song.artist) %></h1>
 ## Objectives
 
 1. Review creating associated objects
