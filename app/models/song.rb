@@ -6,11 +6,8 @@ class Song < ActiveRecord::Base
   end
 
   def artist_name=(name)
-    if name != ""
-      self.artist = Artist.find_or_create_by(name: name)
-    else
-      self.artist = nil
-    end
+    artist = Artist.find_or_create_by(:name => name)
+    self.artist = artist
   end
-   
+
 end

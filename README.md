@@ -1,3 +1,13 @@
+<% @songs.each do |s| %>
+ <p><%= display_artist(s) %></p>
+<% end %>
+
+<% if song.artist && song.artist.name != "" %>
+  <li><%= link_to song.artist.name %></li>
+<% else %>
+  <li><%= link_to "Add Artist", edit_song_path(song) %></li>
+<% end %>
+
 # Refactoring Views With Helpers Lab
 <h1><%= link_to @song.artist.name, artist_path(@song.artist) %></h1>
 ## Objectives
