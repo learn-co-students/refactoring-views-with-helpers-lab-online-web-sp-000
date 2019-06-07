@@ -1,6 +1,7 @@
 class Song < ActiveRecord::Base
   belongs_to :artist
 
+#This 2 method are overwriting the belongs_to association, but they are necessary to have access to song.artist.name in my my helper
   def artist_name
     artist.name
   end
