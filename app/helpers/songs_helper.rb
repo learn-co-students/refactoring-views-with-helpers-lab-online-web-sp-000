@@ -6,7 +6,8 @@ module SongsHelper
             link_to song.artist.name, artist_path(song.artist)
         else
             # binding.pry
-            link_to "Add Artist", controller: "songs", action: "edit", id: song.id
+            link_to 'Add Artist', edit_song_path(song)
+            # link_to "Add Artist", controller: "songs", action: "edit", id: song.id
         end
     end
 end
