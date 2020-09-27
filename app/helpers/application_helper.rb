@@ -1,10 +1,10 @@
 module ApplicationHelper
 
-    def display_artist
-        if artist
-            <h3><%= link_to @song.artist_name, artist_path(@song.artist_id) %></h3>
+    def display_artist(song)
+        if song.artist
+            link_to song.artist.name, artist_path(song.artist)
         else
-            <h3><%= link_to "Add Artist", song_path(@song)/edit %></h3>
+            link_to "Add Artist", edit_song_path(song)
         end
     end
 end
