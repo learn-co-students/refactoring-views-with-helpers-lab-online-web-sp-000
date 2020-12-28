@@ -9,6 +9,7 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    # binding.pry
   end
 
   def create
