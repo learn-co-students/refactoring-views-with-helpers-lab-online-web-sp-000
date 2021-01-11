@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'rspec/rails'
 
 describe "songs", type:  :feature do
 
